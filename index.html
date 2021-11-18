@@ -6,38 +6,28 @@
 <title>Edytor graficzny</title>
 <link rel="stylesheet" href="style.css">
 <script type="text/javascript" src="scripts.js"></script>
+<script type="text/javascript" src="imageEffects.js"></script>
+<script type="text/javascript" src="imageFile.js"></script>
 </head>
 <body style="background: #d15b5b78; font-size: 20px;">
 
-    <div class="editorImage">
-        <canvas id="working_area"width="100%" style="border:1px solid #000000;" ></canvas>
+    <div class="canvasContainer">
+        <canvas id="working_area"></canvas>
     </div>
     
-    <div class="editorMenu">
-    <button  style="margin-left: 5px; margin-top: 10px; font-size: 20px; border-color: #834343; border-radius: 10px; background-color: #f318184a; "
-     onclick="chooseImage()">Załaduj obraz</button> 
-     <button  style="margin-left: 5px; margin-top: 10px; font-size: 20px; border-color: #834343; border-radius: 10px; background-color: #f318184a; "
-     onclick="loadImage()">Odswiez</button> 
-     <p style="margin-left: 5px;"> Rozjaśnij <input class="editorItemsMenu" type="range" id="brightnessRange" min="-10" max="10" value="0" steps="1" onchange="brightness()" ></p>
-     <p style="margin-left: 5px;"> Kontrast <input class="editorItemsMenu" type="range" id="contrastRange" min="1" max="8" value="1" steps="0.5" onchange="contrast()" ></p>
-     <p style="margin-left: 5px;"> Binaryzacja <input class="editorItemsMenu" type="range" id="thresholdingRange" min="1" max="10" value="1" steps="0.1" onchange="thresholding()" ></p>
-     <button  style="margin-left: 5px; font-size: 20px; border-color: #834343; border-radius: 10px; background-color: #f318184a; "
-     onclick="saveImage()">Zapisz obraz</button> 
+    <div class="menuContainer">
+         <button id="buttonStyle" onclick="chooseImage()">Załaduj obraz</button>
+         <button id="buttonStyle" onclick="saveImage()">Zapisz obraz</button><br>
+         <button id="buttonStyle" onclick="brightness()">Rozjaśnij</button> 
+         <button id="buttonStyle" onclick="contrast()">Kontrast</button> 
+         <button id="buttonStyle" onclick="thresholding()">Binaryzacja</button> 
+         <button id="buttonStyle" onclick="negativeImage()">Negatyw</button> 
+         <button id="buttonStyle" onclick="bwUp()">Czarno - bialy</button> 
+         <button id="buttonStyle" onclick="blurEffect()">Rozmazywanie</button> 
+         <button id="buttonStyle" onclick="sharpeningEffect()">Wyostrzanie</button> 
+         <button id="buttonStyle" onclick="edgeDetection()">Krawedzie</button> 
+         <button id="buttonStyle" onclick="liveCameraEffect()">Kamera</button><br>
+         <button id="buttonStyle" onclick="loadImage()">Odswiez</button><br><br>
     </div>
-    <script>
-        var brightnessRange = document.getElementById("brightnessRange");
-        var contrastRange = document.getElementById("contrastRange");
-        var contrastRange = document.getElementById("thresholdingRange");
-        
-        brightnessRange.oninput = function() {
-            brightness();
-        }
-        contrastRange.oninput = function() {
-            contrast();
-        }
-        thresholdingRange.oninput = function() {
-            thresholding();
-        }
-        </script>
 </body>
 </html>

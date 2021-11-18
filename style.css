@@ -1,24 +1,34 @@
-.editorImage {
-    width: 50%;
-    height: 100%;
-    display: inline-flex;
-    justify-content: center;
-    margin-right: 30px;
-    align-items: center;
-    }
+.canvasContainer {
+   display: flex;
+   justify-content: center;
+   margin-right: 10px;
+   align-items: center;
+   margin-top: 20px;
+}
 
- .editorMenu {
-    width: 40%;
-    float: right;
-    background-color: #ff0e076e;
-    text-align: center;
-    border-radius: 30px;
-    margin-right: 20px;
-    }
+.menuContainer {
+   background-color: #ff0e076e;
+   text-align: center;
+   border-radius: 50px;
+   margin-top: 20px;
+   height: 180px;
+}
 
    
- #working_area {
-    width: 100%;
-    background-color: #f9f9f930;
-    }
+#working_area {
+   height: 600px;
+   width: 700px;
+   background-color: #f9f9f930;
+   border:3px solid #000000;
+   }
+
+
+#buttonStyle {
+   margin-left: 5px;
+   margin-top: 10px;
+   font-size: 20px; 
+   border-color: #9ec006;
+   border-radius: 10px;
+   background-color: #f318184a;
+}
  
