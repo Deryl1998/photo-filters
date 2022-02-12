@@ -1,12 +1,12 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
 const {ipcMain} = require('electron')
-const {userSelectImage} = require ("./dialogWindow")
-const {saveImage} = require ("./dialogWindow")
+const {userSelectImage} = require ("./js/dialogWindow")
+const {saveImage} = require ("./js/dialogWindow")
 
 function createWindow() {
         const mainWindow = new BrowserWindow({
-            width: 1200, height: 800, modal: true,
+            width: 1200, height: 1000, modal: true,
             webPreferences: {
             enableRemoteModule: true,
             preload: path.join(__dirname, 'preload.js'),
@@ -15,7 +15,7 @@ function createWindow() {
         }
 
     })
-    mainWindow.webContents.openDevTools()
+    //mainWindow.webContents.openDevTools()
     mainWindow.loadFile('index.html')
 }
 
